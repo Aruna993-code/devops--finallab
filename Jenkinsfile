@@ -16,7 +16,7 @@ pipeline {
         stage('Testing') {
             steps {
                 echo 'Running tests...'
-                // Add your test commands here, e.g., run unit tests or integration tests
+                // sh 'firebase deploy --only hosting --finalexamtesting-33382 --token $FIREBASE_TOKEN'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo 'Deploying to Staging...'
                 // Add Firebase staging deployment command here
-                sh 'firebase deploy --only hosting --project your-staging-project-id --token $FIREBASE_TOKEN'
+                sh 'firebase deploy --only hosting --finalexamstaging-66539 --token $FIREBASE_TOKEN'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
             steps {
                 echo 'Deploying to Production...'
                 // Add Firebase production deployment command here
-                sh 'firebase deploy --only hosting --project your-production-project-id --token $FIREBASE_TOKEN'
+                sh 'firebase deploy --only hosting --finalexamproduction-ea53b--token $FIREBASE_TOKEN'
             }
         }
     }
